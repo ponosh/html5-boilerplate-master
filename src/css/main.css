@@ -100,22 +100,31 @@ h1 {
 }
 
 pre {
-    color:#C9B5FF;
     text-align: left;
 
 }
 
+div.subscript{
+    margin: 10px;
+    text-align: left;
+    color:#C9B5FF;
+}
+
 div.title{
     width: 560px;
+    text-align: left;
 }
 
 div.subtitle{
     width: 400px;
     font-family: 'Open Sans', sans-serif;
+    text-align: left;
     color:#C9B5FF;
 }
 
 div.button{
+    width: 225px;
+    height: 50px;
     color: white;
     border: 2px solid white;
 }
