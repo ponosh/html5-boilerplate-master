@@ -87,10 +87,38 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+    background-image: url("../img/background.jpg");
+    background-size: 100vw;
+    background-repeat-y: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+}
 
+h1 {
+    color: white;
+    text-align: left;
+}
 
+pre {
+    color:#C9B5FF;
+    text-align: left;
 
+}
 
+div.title{
+    width: 560px;
+}
+
+div.subtitle{
+    width: 400px;
+    font-family: 'Open Sans', sans-serif;
+    color:#C9B5FF;
+}
+
+div.button{
+    color: white;
+    border: 2px solid white;
+}
 
 
 
