@@ -87,6 +87,32 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+nav
+ul {
+    list-style-type: none;
+    margin-left: 70px;
+    padding: 20px;
+}
+
+li {
+    width: 60px;
+    display: inline;
+}
+
+div.button-green{
+    width:225px;
+    background-color: #37D84A;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 535px;
+    cursor: pointer;
+}
+
+
 body {
     background-image: url("../img/background.jpg");
     background-size: 100vw;
@@ -128,7 +154,7 @@ div.subtitle{
     color:#C9B5FF;
 }
 
-div.button{
+div.button-purple{
     background-color: #503397;
     border: 2px solid white;
     color: white;
@@ -141,15 +167,6 @@ div.button{
     cursor: pointer;
 }
 
- margin-top: 40px;
-    margin-left: 160px;
-    width: 225px;
-    height: 50px;
-    color: white;
-    border: 2px solid white;
-    text-align: center;
-    align-content: center;
-    vertical-align: middle;
 
 
 
