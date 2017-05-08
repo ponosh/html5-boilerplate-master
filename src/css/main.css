@@ -105,31 +105,51 @@ pre {
 }
 
 div.subscript{
-    margin: 10px;
+    margin: 20px 0px 0px 90px;
+    padding: 0px;
+    border: 0px;
     text-align: left;
     color:#C9B5FF;
+
 }
 
 div.title{
-    width: 560px;
+    padding: 0px;
+    margin: 0px 0px 0px 90px;
+    max-width: 560px;
     text-align: left;
 }
 
 div.subtitle{
-    width: 400px;
+    margin-left: 160px;
+    max-width: 400px;
     font-family: 'Open Sans', sans-serif;
     text-align: left;
     color:#C9B5FF;
 }
 
 div.button{
+    background-color: #503397;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 30px 160px;
+    cursor: pointer;
+}
+
+ margin-top: 40px;
+    margin-left: 160px;
     width: 225px;
     height: 50px;
     color: white;
     border: 2px solid white;
-}
-
-
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
 
 
 
