@@ -90,12 +90,12 @@ textarea {
 nav
 ul {
     list-style-type: none;
-    margin-left: 70px;
-    padding: 20px;
+    margin-left: 15%;
+    padding: 5%;
 }
 
 li {
-    width: 60px;
+    width: auto;
     display: inline;
 }
 
@@ -118,6 +118,7 @@ body {
     background-size: 100vw;
     background-repeat-y: no-repeat;
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -125,9 +126,27 @@ h1 {
     text-align: left;
 }
 
-pre {
-    text-align: left;
+section.intro {
+    width: 100%;
 
+}
+
+section.intro article {
+    float: left;
+    width: 50%;
+    display: block;
+    background: red;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+section.intro .faculty {
+    float: left;
+    width: 50%;
+    display: block;
+    padding: 5%;
+    background: blue;
+    box-sizing: border-box;
 }
 
 div.subscript{
@@ -168,7 +187,10 @@ div.button-purple{
 }
 
 
-
+img {
+    width: 100%;
+    height: auto;
+}
 
 
 
