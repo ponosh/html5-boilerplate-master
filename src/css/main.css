@@ -87,115 +87,81 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-nav
-ul {
+div.navigation-bar ul {
     list-style-type: none;
-    margin-left: 15%;
-    padding: 5%;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #bbb;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
-li {
-    width: auto;
-    display: inline;
+div.navigation-bar ul li {
+    float: left;
 }
 
-div.button-green{
-    width:225px;
-    background-color: #37D84A;
-    color: white;
-    padding: 12px 20px;
+div.navigation-bar ul li a {
+    display: block;
+    color: purple;
+    padding: 15px 15px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    margin-left: 535px;
-    cursor: pointer;
 }
 
+div.navigation-bar ul li a:hover:not(.active) {color: #757575}
 
-body {
-    background-image: url("../img/background.jpg");
-    background-size: 100vw;
-    background-repeat-y: no-repeat;
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
+div.navigation-bar ul li.menu {
+    float: right;
 }
+
+@media screen and (max-width: 600px){
+    div.navigation-bar ul li, 
+    div.navigation-bar ul li.menu {float: none;}
+}
+
+div.headerimage { 
+    width: 100px; height: auto;
+ }
 
 h1 {
-    color: white;
+    color: black;
     text-align: left;
 }
 
-section.intro {
-    width: 100%;
-
-}
-
-section.intro article {
-    float: left;
-    width: 50%;
-    display: block;
-    background: red;
-    padding: 5%;
-    box-sizing: border-box;
-}
-
-section.intro .faculty {
-    float: left;
-    width: 50%;
-    display: block;
-    padding: 5%;
-    background: blue;
-    box-sizing: border-box;
-}
-
-div.subscript{
-    margin: 20px 0px 0px 90px;
-    padding: 0px;
-    border: 0px;
-    text-align: left;
-    color:#C9B5FF;
-
-}
 
 div.title{
     padding: 0px;
-    margin: 0px 0px 0px 90px;
-    max-width: 560px;
+    margin: 1vw 0px 0px 25vw;
+    max-width: 860px;
     text-align: left;
-}
+    font-family: 'Open Sans', sans-serif;
+    color: blue;
+    }
 
 div.subtitle{
-    margin-left: 160px;
-    max-width: 400px;
+    margin-left: 25vw;
+    max-width: 860px;
     font-family: 'Open Sans', sans-serif;
     text-align: left;
-    color:#C9B5FF;
+    color:#242424;
 }
 
-div.button-purple{
-    background-color: #503397;
-    border: 2px solid white;
-    color: white;
-    padding: 12px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    margin: 30px 160px;
-    cursor: pointer;
+div.category{
+    margin-left: 25vw;
+    max-width: 860px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    color:#6336cb;
 }
 
+div.hashtags ul li {
+    list-style-type: none;
+    display: inline;
 
-img {
-    width: 100%;
-    height: auto;
 }
-
-
-
-
-
 
 
 
