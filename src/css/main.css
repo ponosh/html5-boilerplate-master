@@ -123,13 +123,10 @@ div.navigation-bar ul li.menu {
 }
 
 div.headerimage { 
-    width: 100px; height: auto;
+    max-width: 100%;
+    vertical-align: top;
  }
 
-h1 {
-    color: black;
-    text-align: left;
-}
 
 
 div.title{
@@ -138,7 +135,12 @@ div.title{
     max-width: 860px;
     text-align: left;
     font-family: 'Open Sans', sans-serif;
-    color: blue;
+    color: #242424;
+    display: block;
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 1;
+    text-transform: uppercase;
     }
 
 div.subtitle{
@@ -159,11 +161,25 @@ div.category{
 
 div.hashtags ul li {
     list-style-type: none;
+    margin-left: 25vw;
     display: inline;
+    overflow: hidden;
 
+    }
+
+div.hashtags ul li a {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    color:#6336cb;
 }
 
-
+div.article{
+    margin-left: 25vw;
+    max-width: 860px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    color:#242424;
+}
 
 
 /* ==========================================================================
