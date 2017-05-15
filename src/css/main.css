@@ -87,33 +87,75 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #bbb;
+    background-color: #f3f3f3;
+}
 div.navigation-bar ul {
     list-style-type: none;
     background-color: #f3f3f3;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    border: 1px solid #bbb;
-    width: 100%;
-    position: fixed;
-    top: 0;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 div.navigation-bar ul li {
     float: left;
+    display: inline;
+
 }
 
+
 div.navigation-bar ul li a {
+    font-family: 'Open Sans', sans-serif;
     display: block;
-    color: purple;
-    padding: 15px 15px;
-    text-align: center;
+    padding: 20px 10px 20px 0;
     text-decoration: none;
+    color: black;
 }
 
 div.navigation-bar ul li a:hover:not(.active) {color: #757575}
 
-div.navigation-bar ul li.menu {
+div.navigation-bar ul li.logo {
+    max-width: 170px;
+}
+
+div.navigation-bar ul li.logo a img {
+    padding-left: 20px;
+    width: 100%;
+    height: auto;
+}
+
+div.navigation-bar ul li.level1 a {
+
+    padding-left: 20px;
+    color: purple;
+}
+
+div.navigation-bar ul li.level1 a:after{
+    content: "•";
+    padding-left: 5px;
+}
+
+div.navigation-bar ul li.level2 a {
+    
+    color: #242424;
+}
+
+div.navigation-bar ul li.menu a {
+    float: right;
+    color: purple;
+}
+
+div.navigation-bar .menubutton{
+    display: inline-block;
     float: right;
 }
 
@@ -122,17 +164,21 @@ div.navigation-bar ul li.menu {
     div.navigation-bar ul li.menu {float: none;}
 }
 
-div.headerimage { 
-    max-width: 100%;
-    vertical-align: top;
- }
+div.headerimage img { 
+    height: auto; 
+    width: auto; 
+    max-width: 75%; 
+    max-height: 75%;
+    display: block;
+    margin: 10% auto 5% auto;
+}
+
 
 
 
 div.title{
     padding: 0px;
-    margin: 1vw 0px 0px 25vw;
-    max-width: 860px;
+    max-width: 75%;
     text-align: left;
     font-family: 'Open Sans', sans-serif;
     color: #242424;
@@ -141,22 +187,25 @@ div.title{
     font-size: 47px;
     line-height: 1;
     text-transform: uppercase;
+    margin: 0 auto;
     }
 
 div.subtitle{
-    margin-left: 25vw;
-    max-width: 860px;
+    max-width: 75%;
     font-family: 'Open Sans', sans-serif;
     text-align: left;
     color:#242424;
+    display: block;
+    margin: 0 auto;
 }
 
 div.category{
-    margin-left: 25vw;
-    max-width: 860px;
+    max-width: 75%;
     font-family: 'Open Sans', sans-serif;
     text-align: left;
     color:#6336cb;
+    display: block;
+    margin: 0 auto;
 }
 
 div.hashtags ul li {
