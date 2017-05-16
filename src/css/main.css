@@ -100,7 +100,7 @@ nav {
     background-color: #f3f3f3;
 }
 
-        /* Menu active css */
+        /* Menu active css http://codepen.io/una/pen/FEtze */
 
         @import "compass/css3";
 
@@ -275,7 +275,7 @@ body {
             height: auto; 
             width: auto; 
             max-width: 100%; 
-            max-height: 100%;
+            max-height: 75%;
             display: block;
             margin: 0 auto 5% auto;
         }
@@ -302,9 +302,12 @@ body {
             color:#242424;
             display: block;
             margin: 1% auto;
+            font-size: 22px;
+            font-weight: 200;
+            line-height: 1;
         }
 
-        body div.category h3 {
+        body div.category {
             max-width: 75%;
             font-family: 'Open Sans', sans-serif;
             text-align: left;
@@ -313,10 +316,10 @@ body {
             margin: 0 auto;
         }
 
-        body div.hashtags ul li  {
+        body div.hashtags ul li {
             list-style-type: none;
             display: inline;
-            overflow: hidden;
+            max-width: 75%;
             margin: 0 auto;
         }
 
@@ -327,8 +330,8 @@ body {
         }
 
         body div.article{
-            margin-left: 25vw;
-            max-width: 75%;
+            margin: 0 auto;
+            max-width: 60%;
             font-family: 'Open Sans', sans-serif;
             text-align: left;
             color:#242424;
@@ -337,8 +340,8 @@ body {
         body div.article img {
             height: auto; 
             width: auto; 
-            max-width: 75%; 
-            max-height: 75%;
+            max-width: 100%; 
+            max-height: 100%;
             display: block;
             margin: 10% auto 5% auto;
         }
