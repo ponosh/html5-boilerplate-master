@@ -88,6 +88,13 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
 nav {
     width: 100%;
     position: fixed;
@@ -100,185 +107,181 @@ nav {
     background-color: #f3f3f3;
 }
 
-        /* Menu active css http://codepen.io/una/pen/FEtze */
+/*
 
-        @import "compass/css3";
+    Menu Toggle Button
 
-        body {
-          margin: 0;
-          padding: 0;
-        }
+*/
+.menu-toggle {
+    background: blue;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 16px;
+    margin-right: 18px;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
 
-        nav div.navigation-bar .menubutton .menu-toggle {
-          width: 40px;
-          height: 30px;
-          position: absolute;
-          top: 20px;
-          right: 25px;
-          cursor: pointer;
-          
-          &.on 
+.menu-toggle span {
+    width: 100%;
+    display: block;
+    position: absolute;
+    background: red;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -2.5px;
+    height: 5px;
+}
 
-            nav div.navigation-bar .menubutton .menu-toggle .one {
-              @include transform(rotate(45deg) translate(7px, 7px));
-            }
+.menu-toggle:before,
+.menu-toggle:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: red;
+    height: 5px;
+    transition: all 0.125s linear; 
+}
 
-            nav div.navigation-bar .menubutton .menu-toggle .two {
-              opacity: 0;
-            }
+.menu-toggle:after {
+    top: auto;
+    bottom: 0;
+}
 
-            nav div.navigation-bar .menubutton .menu-toggle .three {
-              @include transform (rotate(-45deg) translate(8px, -10px));
-            }
-            }
-        }
+.menu-toggle.active span {
+    display: none;
+}
 
-            nav div.navigation-bar .menubutton .one,
-            nav div.navigation-bar .menubutton.two,
-            nav div.navigation-bar .menubutton.three{
-            width: 100%;
-            height: 5px;
-            background: white;
-            margin: 6px auto;
-            backface-visibility: hidden;
-            @include transition-duration(0.3s);
-            }   
+.menu-toggle.active:before {
+    top: 13px;
+    transform: rotate(45deg);
+}
 
-            nav div.navigation-bar .menubutton ul{
-             margin: 0;
-            padding: 0;
-            font-family: Open Sans;
-            list-style: none;
-            margin: 4em auto;
-            text-align: center;
-           
-           & .hidden {
-            display: none;
-            }
-            
-            nav div.navigation-bar .menubutton ul a {
-            @include transition-duration(0.5s);
-            text-decoration: none;
-            color: white;
-            font-size: 3em;
-            line-height: 1.5;
-            width: 100%;
-            display: block;
-              &:hover {
-                background-color: rgba(0,0,0,0.5);
-              }
-            }
-            }
+.menu-toggle.active:after {
+    bottom: 12px;
+    transform: rotate(-45deg);
+}
 
-            nav div.navigation-bar .menubutton {
-            &.on {
-            z-index: 10;
-            width: 100%;
-            height: 100%;
-            display: block;
-            background-color: rgba(0,0,0,0.5);
-            position: absolute;
-         }
-        }
+/*menu css end*/
 
-        /*menu css end*/
+/*div.navigation-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    background: purple;
+}*/
 
-        div.navigation-bar ul {
-            list-style-type: none;
-            background-color: #f3f3f3;
-            margin: 0;
-            padding: 0;
-            vertical-align: middle;
-            display: inline-block;
-        }
+/*div.navigation-bar ul li {
+    float: left;
+    display: inline;
 
-        div.navigation-bar ul li {
-            float: left;
-            display: inline;
+}*/
 
-        }
+.navigation-bar ul {
+    list-style: none;
+    overflow: auto;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
 
+.navigation-bar ul li {
+    float: left;
+}
 
-        div.navigation-bar ul li a {
-            font-family: 'Open Sans', sans-serif;
-            display: block;
-            padding: 20px 10px 20px 0;
-            text-decoration: none;
-            color: black;
-        }
+.navigation-bar ul li a {
+    display: block;
+    padding: 20px 10px 20px 0;
+    text-decoration: none;
+    color: black;
+}
 
-        div.navigation-bar ul li a:hover:not(.active) {color: #757575}
+/*div.navigation-bar ul li a:hover:not(.active) {color: #757575}*/
 
-        div.navigation-bar ul li.logo {
-            max-width: 170px;
-        }
+.logo a img {
+    padding-left: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 170px;
+}
 
-        div.navigation-bar ul li.logo a img {
-            padding-left: 20px;
-            width: 100%;
-            height: auto;
-        }
+div.navigation-bar ul li.level1 a {
+    padding-left: 20px;
+    color: #6336cb;
+}
 
-        div.navigation-bar ul li.level1 a {
+ul[role="navigation"] {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: purple;
+    margin: 0;
+    padding: 0;
+}
 
-            padding-left: 20px;
-            color: #6336cb;
-        }
+/*div.navigation-bar ul li.level1 a:after{
+    content: "•";
+    padding-left: 5px;
+}*/
 
-        div.navigation-bar ul li.level1 a:after{
-            content: "•";
-            padding-left: 5px;
-        }
+/*div.navigation-bar ul li.level2 a {
+    color: #242424;
+}*/
 
-        div.navigation-bar ul li.level2 a {
-            
-            color: #242424;
-        }
+/*div.navigation-bar ul li.menu a {
+    float: right;
+    color: purple;
+}*/
 
-        div.navigation-bar ul li.menu a {
-            float: right;
-            color: purple;
-        }
+/*div.navigation-bar .menubutton {
+display: inline-block;
+float: right;
+position: absolute;
+top: 0;
+right: 10px;
+appearance: none;
+background: transparent;
+border: none;
+color: ivory;
+}*/
 
-        div.navigation-bar .menubutton {
-        display: inline-block;
-        float: right;
-        position: absolute;
-        top: 0;
-        right: 10px;
-        appearance: none;
-        background: transparent;
-        border: none;
-        color: ivory;
-        }
-
-        div.navigation-bar .menubutton a {
-         float: right;
-         color: #6336cb;
-         font-family: 'Open Sans', sans-serif;
-         display: block;
-         padding: 20px 10px 20px 0;
-         text-decoration: none;
-        }
+/*div.navigation-bar .menubutton a {
+ float: right;
+ color: #6336cb;
+ font-family: 'Open Sans', sans-serif;
+ display: block;
+ padding: 20px 10px 20px 0;
+ text-decoration: none;
+}*/
 
 @media screen and (max-width: 600px){
     div.navigation-bar ul li, 
     div.navigation-bar ul li.menu {float: none;}
 }
 
-body {
-    font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
+body div.headerimage img { 
+    height: auto; 
+    width: auto; 
+    max-width: 100%; 
+    max-height: 75%;
+    display: block;
+    margin: 0 auto 5% auto;
 }
-
-        body div.headerimage img { 
-            height: auto; 
-            width: auto; 
-            max-width: 100%; 
-            max-height: 75%;
-            display: block;
-            margin: 0 auto 5% auto;
-        }
 
 
         body div.title h1 {
@@ -326,7 +329,7 @@ body {
         body div.hashtags ul li a {
             font-family: 'Open Sans', sans-serif;
             text-align: left;
-            color:#6336cb;
+            color:#523598;
         }
 
         body div.article{
@@ -346,6 +349,23 @@ body {
             margin: 10% auto 5% auto;
         }
 
+
+        body div.sidebar img {
+        width: auto;
+        height: auto;
+        max-width: 20%;
+        max-height: 20%; 
+        }
+
+        body div.sidebar h3 {
+        width: auto;
+        height: auto;
+        max-width: 20%;
+        max-height: 20%; 
+        font-family: 'Open Sans', sans-serif;
+        text-align: left;
+        color:#523598;
+        }
 
 
 
