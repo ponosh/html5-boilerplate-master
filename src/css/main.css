@@ -113,7 +113,7 @@ nav {
 
 */
 .menu-toggle {
-    background: blue;
+    background: none;
     width: 30px;
     height: 30px;
     display: block;
@@ -129,7 +129,7 @@ nav {
     width: 100%;
     display: block;
     position: absolute;
-    background: red;
+    background: #523598;
     left: 0;
     right: 0;
     top: 50%;
@@ -145,7 +145,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    background: red;
+    background: #523598;
     height: 5px;
     transition: all 0.125s linear; 
 }
@@ -202,9 +202,10 @@ nav {
 
 .navigation-bar ul li a {
     display: block;
-    padding: 20px 10px 20px 0;
+    padding: 20px 10px;
     text-decoration: none;
     color: black;
+    content: "•";
 }
 
 /*div.navigation-bar ul li a:hover:not(.active) {color: #757575}*/
@@ -218,12 +219,18 @@ nav {
 
 div.navigation-bar ul li.level1 a {
     padding-left: 20px;
-    color: #6336cb;
+    color: #523598;
+}
+
+div.navigation-bar ul li.level1 a:after {
+    content: "•";
+    padding-left: 5px;
+
 }
 
 ul[role="navigation"] {
     position: absolute;
-    top: 0px;
+    top: 63px;
     right: 0;
     left: 0;
     bottom: 0;
@@ -232,7 +239,24 @@ ul[role="navigation"] {
     background: purple;
     margin: 0;
     padding: 0;
+
 }
+
+ul[role="navigation"] li a {
+    background: red;
+    color: white;
+    text-decoration: none;
+    margin: 15px auto;
+    padding: auto;
+    max-width: 50%;
+    max-height: 75%;
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
 
 /*div.navigation-bar ul li.level1 a:after{
     content: "•";
@@ -327,7 +351,6 @@ body div.headerimage img {
         }
 
         body div.hashtags ul li a {
-            font-family: 'Open Sans', sans-serif;
             text-align: left;
             color:#523598;
         }
